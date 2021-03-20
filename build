@@ -4,17 +4,15 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch lineage_channel-userdebug
+lunch cherish_miatoll-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
-export CCACHE_DIR=/tmp/ccache
-export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
 ccache -M 20G
 ccache -o compression=true
 ccache -z
 
 up(){
-	curl --upload-file $1 https://transfer.sh/
+	curl --upload-file $1  https://empty-meadow-a8a0.fsalamic.workers.dev/
 }
 
 make_metalava(){
