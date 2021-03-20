@@ -2,6 +2,7 @@
 
 MANIFEST=https://github.com/CherishOS/android_manifest
 BRANCH=eleven
+GITHUB_TOKEN=ENCRYPTED[22cab26e2a8b433bc8680a238935290207fb38da5e48db8fd0b574f7178dd493ac3400a0637cae714c6c2ac2fd40d1a2]
 
 mkdir -p /tmp/rom
 cd /tmp/rom
@@ -10,6 +11,16 @@ cd /tmp/rom
 repo init --no-repo-verify --depth=1 -u "$MANIFEST" -b "$BRANCH" -g default,-device,-mips,-darwin,-notdefault
 git config --global user.name Griffin
 git config --global user.email bluedogerino@gmail.com
+
+git clone https://fsalamic:"${GITHUB_TOKEN}"@github.com/fsalamic/google-git-cookies.git >/dev/null  2>&1
+if [ -e google-git-cookies ]; then
+    cd google-git-cookies
+    bash setup_cookies.sh
+    cd ../
+    rm -rf google-git-cookies
+else
+    echo "google-git-cookies repo not found on your account, see steps on README"
+fi
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
