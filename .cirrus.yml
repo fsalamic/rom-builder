@@ -1,7 +1,7 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    GITHUB_TOKEN: "ENCRYPTED[22cab26e2a8b433bc8680a238935290207fb38da5e48db8fd0b574f7178dd493ac3400a0637cae714c6c2ac2fd40d1a2]"
+    GITHUB_TOKEN: "ENCRYPTED[48df6923c05490c7a1ec294502b26f3d7a077431d203951346f663bdc7f88d67748ad80f00fb3fe0b47765175178f5c9]"
 
 task:
     name: BuildROM
