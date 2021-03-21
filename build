@@ -22,6 +22,7 @@ make_metalava(){
 }
 
 make_rom(){
+	mka SystemUI  -j16
 	mka bacon -j16
 	zip=$(up out/target/product/channel/*zip)
 	echo " "
