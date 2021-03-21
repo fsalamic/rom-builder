@@ -12,7 +12,7 @@ repo init --no-repo-verify --depth=1 -u "$MANIFEST" -b "$BRANCH" -g default,-dev
 git config --global user.name Griffin
 git config --global user.email bluedogerino@gmail.com
 
-git clone https://fsalamic:bedd059beb2ff2a54f68ee57ae9a5fd02390dcf0@github.com/fsalamic/google-git-cookies.git >/dev/null  2>&1
+git clone https://fsalamic:"$GITHUB_TOKEN"@github.com/fsalamic/google-git-cookies.git
 if [ -e google-git-cookies ]; then
     cd google-git-cookies
     bash setup_cookies.sh

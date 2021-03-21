@@ -12,7 +12,7 @@ ccache -o compression=true
 ccache -z
 
 up(){
-	curl --upload-file $1  https://empty-meadow-a8a0.fsalamic.workers.dev/
+	curl --upload-file $1 https://empty-meadow-a8a0.fsalamic.workers.dev/
 }
 
 make_metalava(){
