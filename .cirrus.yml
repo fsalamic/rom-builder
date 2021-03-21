@@ -5,7 +5,7 @@ env: # Environt variable to pass to all tasks
 
 task:
     name: BuildROM
-    timeout_in: 240m
+    timeout_in: 123m
     container:
       image: apon77/aosp:latest
       cpu: 16
