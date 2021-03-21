@@ -2,7 +2,7 @@
 
 MANIFEST=https://github.com/CherishOS/android_manifest
 BRANCH=eleven
-GITHUB_TOKEN=ENCRYPTED[22cab26e2a8b433bc8680a238935290207fb38da5e48db8fd0b574f7178dd493ac3400a0637cae714c6c2ac2fd40d1a2]
+export GITHUB_TOKEN="ENCRYPTED[22cab26e2a8b433bc8680a238935290207fb38da5e48db8fd0b574f7178dd493ac3400a0637cae714c6c2ac2fd40d1a2]"
 
 mkdir -p /tmp/rom
 cd /tmp/rom
