@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MANIFEST=repo init -u git://github.com/LineageOS/android.git
-BRANCH=lineage-18.1
+BRANCH=lineage-17.1
 
 mkdir -p /tmp/rom
 cd /tmp/rom
