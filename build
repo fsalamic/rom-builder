@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch cherish_miatoll-userdebug
+lunch aosp_miatoll-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export USE_CCACHE=1
 ccache -M 20G
