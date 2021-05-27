@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt install repo -y
 
 MANIFEST=repo init -u git://github.com/LineageOS/android.git
 BRANCH=lineage-17.1
