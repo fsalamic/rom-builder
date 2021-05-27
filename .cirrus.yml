@@ -8,7 +8,7 @@ task:
     timeout_in: 123m
     container:
       image: apon77/aosp:latest
-      cpu: 16
+      cpu: 8
       memory: 24G
     sync_script:
       - ./sync
